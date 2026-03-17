@@ -73,6 +73,71 @@ const DEMO_POSTS = [
     "verified": true,
     "upvotes": 203,
     "comments": []
+  },
+  {
+    "id": "demo-6",
+    "title": "🌊 Sea Level Rise Threatens Coastal Cities Worldwide",
+    "content": "Global sea levels rising at accelerated rate of 3.4mm annually. Millions of residents at risk.",
+    "source": "World Ocean Observatory",
+    "sourceURL": "https://worldoceanobservatory.org",
+    "hazardType": "climate",
+    "priority": "high",
+    "timestamp": "2026-03-17T09:15:00Z",
+    "verified": true,
+    "upvotes": 145,
+    "comments": []
+  },
+  {
+    "id": "demo-7",
+    "title": "🦈 Shark Population Decline Affects Marine Food Chain",
+    "content": "Endangered shark species vital to ocean ecosystems continue declining. Conservation efforts intensified.",
+    "source": "Marine Conservation Society",
+    "sourceURL": "https://mcsuk.org",
+    "hazardType": "conservation",
+    "priority": "high",
+    "timestamp": "2026-03-17T08:45:00Z",
+    "verified": true,
+    "upvotes": 92,
+    "comments": []
+  },
+  {
+    "id": "demo-8",
+    "title": "🪨 Coral Bleaching Event Spreads Across Pacific",
+    "content": "Unprecedented coral bleaching affecting major reef systems. Recovery timeline uncertain.",
+    "source": "Reef Foundation International",
+    "sourceURL": "https://reeffoundation.org",
+    "hazardType": "conservation",
+    "priority": "critical",
+    "timestamp": "2026-03-17T07:30:00Z",
+    "verified": true,
+    "upvotes": 278,
+    "comments": []
+  },
+  {
+    "id": "demo-9",
+    "title": "⚡ Lightning Strike Risk Increases During Coastal Storms",
+    "content": "Beachgoers advised to seek shelter during thunderstorms. Multiple incidents reported this season.",
+    "source": "Coastal Safety Bureau",
+    "sourceURL": "https://coastalsafetybureau.org",
+    "hazardType": "storm",
+    "priority": "high",
+    "timestamp": "2026-03-17T06:00:00Z",
+    "verified": true,
+    "upvotes": 67,
+    "comments": []
+  },
+  {
+    "id": "demo-10",
+    "title": "🌫️ Harmful Algal Bloom Warning Extended",
+    "content": "Toxic algae bloom spreads in coastal waters. Beach closures implemented across region.",
+    "source": "Marine Health Institute",
+    "sourceURL": "https://marinehealthinstitute.org",
+    "hazardType": "pollution",
+    "priority": "critical",
+    "timestamp": "2026-03-17T05:15:00Z",
+    "verified": true,
+    "upvotes": 134,
+    "comments": []
   }
 ];
 
