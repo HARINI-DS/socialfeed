@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { scrapeFeed } from './controllers/feedController.js';
 import { getPosts, createPost } from './controllers/postsController.js';
 import { startNewsScraperService } from './services/newsScraperService.js';
@@ -8,12 +10,19 @@ import { connectMongoDB } from './utils/mongoStore.js';
 
 dotenv.config();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Serve static frontend build
+const frontendPath = path.join(__dirname, '../frontend/dist');
+app.use(express.static(frontendPath));
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -67,7 +76,12 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'Backend is running' });
 });
 
-// 404 handler
+// Serve frontend for all non-API routes (SPA support)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(frontendPath, 'index.html'));
+});
+
+// 404 handler for API
 app.use((req, res) => {
   res.status(404).json({ 
     success: false,
